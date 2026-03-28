@@ -7,7 +7,7 @@
         "codeCoverage" : true,
         "codeCoverageTargets" : [
           {
-            "containerPath" : "package:XcodeColorTheory",
+            "containerPath" : "container:XcodeColorTheory",
             "identifier" : "XcodeColorTheory",
             "name" : "XcodeColorTheory"
           }
@@ -21,7 +21,7 @@
         "codeCoverage" : true,
         "codeCoverageTargets" : [
           {
-            "containerPath" : "package:XcodeColorTheory",
+            "containerPath" : "container:XcodeColorTheory",
             "identifier" : "XcodeColorTheory",
             "name" : "XcodeColorTheory"
           }
@@ -34,7 +34,7 @@
             "ThemeSerializerTests"
           ],
           "target" : {
-            "containerPath" : "package:XcodeColorTheory",
+            "containerPath" : "container:XcodeColorTheory",
             "identifier" : "XcodeColorTheoryTests",
             "name" : "XcodeColorTheoryTests"
           }
@@ -54,7 +54,7 @@
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "package:XcodeColorTheory",
+        "containerPath" : "container:XcodeColorTheory",
         "identifier" : "XcodeColorTheoryTests",
         "name" : "XcodeColorTheoryTests"
       }
