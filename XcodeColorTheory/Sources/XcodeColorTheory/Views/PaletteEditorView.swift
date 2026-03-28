@@ -55,7 +55,11 @@ public struct PaletteEditorView: View {
                 AlbersAnalysisView(palette: palette)
             }
         }
+        #if os(iOS)
         .listStyle(.insetGrouped)
+        #else
+        .listStyle(.inset)
+        #endif
         .navigationTitle(palette.name)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
