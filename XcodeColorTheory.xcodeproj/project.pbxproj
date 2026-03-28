@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,17 +42,17 @@
 		AA0000000000000000000021 = {
 			isa = PBXGroup;
 			children = (
-				AA0000000000000000000022 /* XcodeColorTheoryApp */,
+				AA0000000000000000000022 /* XcodeColorTheory/Sources/XcodeColorTheoryApp */,
 				AA0000000000000000000023 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AA0000000000000000000022 /* XcodeColorTheoryApp */ = {
+		AA0000000000000000000022 /* XcodeColorTheory/Sources/XcodeColorTheoryApp */ = {
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000001 /* XcodeColorTheoryApp.swift */,
 			);
-			path = "XcodeColorTheory/Sources/XcodeColorTheoryApp";
+			path = XcodeColorTheory/Sources/XcodeColorTheoryApp;
 			sourceTree = "<group>";
 		};
 		AA0000000000000000000023 /* Products */ = {
@@ -188,8 +188,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4X4VK2YG8H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableDescription = "Xcode Color Theory";
@@ -200,7 +202,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xcodecolorthory.macos";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesphipps.theorythemes.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -212,8 +214,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4X4VK2YG8H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableDescription = "Xcode Color Theory";
@@ -224,7 +228,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xcodecolorthory.macos";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesphipps.theorythemes.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -238,6 +242,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4X4VK2YG8H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -251,7 +256,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xcodecolorthory.ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesphipps.theorythemes.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -266,6 +271,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4X4VK2YG8H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -279,7 +285,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.xcodecolorthory.ios";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesphipps.theorythemes.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -453,7 +459,6 @@
 			productName = XcodeColorTheory;
 		};
 /* End XCSwiftPackageProductDependency section */
-
 	};
 	rootObject = AA0000000000000000000081 /* Project object */;
 }
