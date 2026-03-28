@@ -66,7 +66,7 @@ public func vibrationRisk(colorA: OKLCHColor, colorB: OKLCHColor) -> Double {
 
     // Vibration occurs when luminance is similar AND hue differs
     // The risk function is: (1 - luminanceDiff) * hueDiff * chromaFactor
-    let chromaFactor = (colorA.chroma + colorB.chroma) / 0.8  // normalize chroma contribution
+    let chromaFactor = (colorA.chroma + colorB.chroma) / 0.4  // normalize to single-colour max (0.4)
     let risk = (1 - luminanceDiff.clamped(to: 0...1)) * hueDiff * chromaFactor.clamped(to: 0...1)
 
     return risk.clamped(to: 0...1)
@@ -130,8 +130,8 @@ public func colorTemperature(hue: Double) -> ColorTemperature {
     switch h {
     case 0..<60:    return .warm
     case 60..<120:  return .neutral
-    case 120..<240: return .cool
-    case 240..<300: return .neutral
+    case 120..<260: return .cool
+    case 260..<300: return .neutral
     default:        return .warm     // 300–360
     }
 }
