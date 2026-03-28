@@ -3,6 +3,8 @@ import SwiftUI
 public struct ContentView: View {
     @Environment(AppEnvironment.self) private var env
 
+    public init() {}
+
     public var body: some View {
         @Bindable var env = env
         NavigationSplitView {
