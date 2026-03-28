@@ -9,10 +9,8 @@ let package = Package(
     ],
     products: [
         // Library: Domain, Services, Views, AppEnvironment.
-        // Imported by the app target and by the test target.
+        // Imported by the Xcode project app targets and by the test target.
         .library(name: "XcodeColorTheory", targets: ["XcodeColorTheory"]),
-        // Executable: only the @main entry point.
-        .executable(name: "XcodeColorTheoryApp", targets: ["XcodeColorTheoryApp"])
     ],
     targets: [
         // Core library — all model, service, and view code.
@@ -24,15 +22,8 @@ let package = Package(
                 .swiftLanguageMode(.v6)
             ]
         ),
-        // App shell — only the @main struct. Depends on the library.
-        .executableTarget(
-            name: "XcodeColorTheoryApp",
-            dependencies: ["XcodeColorTheory"],
-            path: "Sources/XcodeColorTheoryApp",
-            swiftSettings: [
-                .swiftLanguageMode(.v6)
-            ]
-        ),
+        // Sources/XcodeColorTheoryApp/XcodeColorTheoryApp.swift (@main) is compiled
+        // by the native Xcode project targets in XcodeColorTheory.xcodeproj, not here.
         .testTarget(
             name: "XcodeColorTheoryTests",
             dependencies: ["XcodeColorTheory"],
