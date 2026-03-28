@@ -15,7 +15,7 @@ let package = Package(
             name: "XcodeColorTheory",
             path: "Sources/XcodeColorTheory",
             swiftSettings: [
-                .enableExperimentalFeature("StrictConcurrency")
+                .swiftLanguageMode(.v6)
             ]
         ),
         .testTarget(
