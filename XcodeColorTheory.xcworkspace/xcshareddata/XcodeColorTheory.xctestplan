@@ -1,0 +1,64 @@
+{
+  "configurations" : [
+    {
+      "id" : "DA3F2C01-8B4A-4E1A-9C7D-F0B2E5A63190",
+      "name" : "All Tests",
+      "options" : {
+        "codeCoverage" : true,
+        "codeCoverageTargets" : [
+          {
+            "containerPath" : "package:XcodeColorTheory",
+            "identifier" : "XcodeColorTheory",
+            "name" : "XcodeColorTheory"
+          }
+        ]
+      }
+    },
+    {
+      "id" : "B7E91A44-3C6F-4D2B-A805-19D4C8723EF1",
+      "name" : "Albers Domain",
+      "options" : {
+        "codeCoverage" : true,
+        "codeCoverageTargets" : [
+          {
+            "containerPath" : "package:XcodeColorTheory",
+            "identifier" : "XcodeColorTheory",
+            "name" : "XcodeColorTheory"
+          }
+        ]
+      },
+      "testTargets" : [
+        {
+          "skippedTests" : [
+            "PaletteValidationTests",
+            "ThemeSerializerTests"
+          ],
+          "target" : {
+            "containerPath" : "package:XcodeColorTheory",
+            "identifier" : "XcodeColorTheoryTests",
+            "name" : "XcodeColorTheoryTests"
+          }
+        }
+      ]
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : true,
+    "language" : "en",
+    "maximumTestRepetitions" : 3,
+    "region" : "US",
+    "repetitionMode" : "retryOnFailure",
+    "testTimeoutsEnabled" : true,
+    "defaultTestExecutionTimeAllowance" : 60
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "package:XcodeColorTheory",
+        "identifier" : "XcodeColorTheoryTests",
+        "name" : "XcodeColorTheoryTests"
+      }
+    }
+  ],
+  "version" : 1
+}
