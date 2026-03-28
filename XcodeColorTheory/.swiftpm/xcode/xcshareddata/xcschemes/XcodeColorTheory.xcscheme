@@ -15,9 +15,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "XcodeColorTheory"
-               BuildableName = "XcodeColorTheory"
-               BlueprintName = "XcodeColorTheory"
+               BlueprintIdentifier = "XcodeColorTheoryApp"
+               BuildableName = "XcodeColorTheoryApp"
+               BlueprintName = "XcodeColorTheoryApp"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,9 +56,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "XcodeColorTheory"
-            BuildableName = "XcodeColorTheory"
-            BlueprintName = "XcodeColorTheory"
+            BlueprintIdentifier = "XcodeColorTheoryApp"
+            BuildableName = "XcodeColorTheoryApp"
+            BlueprintName = "XcodeColorTheoryApp"
             ReferencedContainer = "container:">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -73,9 +73,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "XcodeColorTheory"
-            BuildableName = "XcodeColorTheory"
-            BlueprintName = "XcodeColorTheory"
+            BlueprintIdentifier = "XcodeColorTheoryApp"
+            BuildableName = "XcodeColorTheoryApp"
+            BlueprintName = "XcodeColorTheoryApp"
             ReferencedContainer = "container:">
          </BuildableReference>
       </BuildableProductRunnable>

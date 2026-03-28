@@ -1,4 +1,5 @@
 import SwiftUI
+import XcodeColorTheory
 
 @main
 struct XcodeColorTheoryApp: App {
