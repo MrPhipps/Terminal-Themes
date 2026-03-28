@@ -65,8 +65,9 @@ public actor ThemeExporter {
         }
     }
 
-    // MARK: - Export to Xcode's theme directory
+    // MARK: - Export to Xcode's theme directory (macOS only)
 
+    #if os(macOS)
     /// Exports directly to Xcode's user theme folder.
     ///
     /// The file will appear in Xcode → Settings → Themes immediately (restart not required
@@ -87,6 +88,7 @@ public actor ThemeExporter {
         try await export(palette: palette, to: url, overwrite: overwrite, font: font)
         return url
     }
+    #endif
 
     // MARK: - Export to Downloads
 
@@ -109,11 +111,13 @@ public actor ThemeExporter {
 
     // MARK: - Private
 
+    #if os(macOS)
     private func xcodeThemesDirectory() -> URL {
         return FileManager.default
             .homeDirectoryForCurrentUser
             .appendingPathComponent("Library/Developer/Xcode/UserData/FontAndColorThemes")
     }
+    #endif
 
     /// Sanitizes a palette name into a safe filename component.
     ///

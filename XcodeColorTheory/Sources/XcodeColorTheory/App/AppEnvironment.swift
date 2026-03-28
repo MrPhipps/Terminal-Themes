@@ -126,6 +126,7 @@ public final class AppEnvironment {
 
     // MARK: - Export
 
+    #if os(macOS)
     public func exportToXcodeThemes(font: ThemeFont = .default) async {
         exportState = .exporting
         do {
@@ -135,6 +136,7 @@ public final class AppEnvironment {
             exportState = .failure(error.localizedDescription)
         }
     }
+    #endif
 
     public func exportToDownloads(font: ThemeFont = .default) async {
         exportState = .exporting
