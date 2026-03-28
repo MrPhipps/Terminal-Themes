@@ -44,7 +44,6 @@
 			children = (
 				AA0000000000000000000022 /* XcodeColorTheoryApp */,
 				AA0000000000000000000023 /* Products */,
-				AA0000000000000000000024 /* Packages */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,14 +62,6 @@
 				AA0000000000000000000003 /* XcodeColorTheory iOS.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		AA0000000000000000000024 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				AA0000000000000000000091 /* XcodeColorTheory */,
-			);
-			name = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
