@@ -109,6 +109,13 @@ struct NewPaletteSheet: View {
         ColorPalette.builtIn.first(where: { $0.name == basedOnName }) ?? .albersMidnight
     }
 
+    private var previewPalette: ColorPalette {
+        let hues = accentHues(base: baseHue, scheme: scheme)
+        let generated = assignHuesToRoles(hues: hues, background: basedOn[.background])
+        let merged = basedOn.colors.merging(generated) { _, new in new }
+        return ColorPalette(name: name.isEmpty ? "Preview" : name, colors: merged)
+    }
+
     var body: some View {
         NavigationStack {
             Form {
@@ -122,6 +129,13 @@ struct NewPaletteSheet: View {
                         }
                     }
                 }
+                Section("Preview") {
+                    ThemePreviewView(palette: previewPalette)
+                        .frame(height: 260)
+                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                        .listRowInsets(.init())
+                }
+
                 Section("Harmony") {
                     Picker("Scheme", selection: $scheme) {
                         ForEach(HarmonyScheme.allCases, id: \.self) { scheme in
