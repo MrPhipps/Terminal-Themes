@@ -63,7 +63,12 @@ public final class AppEnvironment {
     /// reflects additions, deletions, and renames without capturing a stale copy.
     public var selectedPalette: ColorPalette {
         get { palettes.first(where: { $0.name == selectedPaletteName }) ?? .albersMidnight }
-        set { selectedPaletteName = newValue.name }
+        set {
+            selectedPaletteName = newValue.name
+            if let index = palettes.firstIndex(where: { $0.name == newValue.name }) {
+                palettes[index] = newValue
+            }
+        }
     }
 
     /// Bindable name used for List selection.
