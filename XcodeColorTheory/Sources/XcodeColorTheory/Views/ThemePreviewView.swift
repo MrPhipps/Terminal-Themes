@@ -105,8 +105,8 @@ public struct ThemePreviewView: View {
             token(" {", role: .plainText, font: font)
         })
 
-        // Line 7: let name
-        codeLine(lineNumber: 7, content: {
+        // Line 7: let name  (selected line — shows .selection bg + .insertionPoint cursor)
+        codeLine(lineNumber: 7, isSelected: true, content: {
             tab()
             token("let", role: .keyword, font: font)
             space()
@@ -228,7 +228,11 @@ public struct ThemePreviewView: View {
     private func space() -> some View { Text(" ").font(.system(size: 13, design: .monospaced)) }
     private func tab() -> some View { Text("    ").font(.system(size: 13, design: .monospaced)) }
 
-    private func codeLine<Content: View>(lineNumber: Int, @ViewBuilder content: () -> Content) -> some View {
+    private func codeLine<Content: View>(
+        lineNumber: Int,
+        isSelected: Bool = false,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
         HStack(alignment: .center, spacing: 0) {
             // Gutter / line number
             Text("\(lineNumber)")
@@ -240,9 +244,21 @@ public struct ThemePreviewView: View {
             // Code tokens
             HStack(alignment: .center, spacing: 0) {
                 content()
+                if isSelected {
+                    Text("|")
+                        .font(.system(size: 13, weight: .light, design: .monospaced))
+                        .foregroundStyle(oklchToRGB(palette[.insertionPoint]).swiftUIColor)
+                }
             }
+
+            Spacer(minLength: 0)
         }
         .frame(height: 20)
+        .background(
+            isSelected
+                ? oklchToRGB(palette[.selection]).swiftUIColor
+                : Color.clear
+        )
     }
 
     private func blankLine(_ number: Int) -> some View {
