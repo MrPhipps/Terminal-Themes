@@ -86,7 +86,9 @@ public actor ThemeExporter {
         overwrite: Bool = true,
         fontHierarchy: FontHierarchy = .default
     ) async throws -> URL {
-        let downloads: URL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first!
+        guard let downloads: URL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first else {
+            throw ExportError.serializationFailed("Downloads directory unavailable on this device")
+        }
         let fileName: String = safeFileName(for: palette.name) + ".xccolortheme"
         let url: URL = downloads.appendingPathComponent(fileName)
         try await export(palette: palette, to: url, overwrite: overwrite, fontHierarchy: fontHierarchy)
