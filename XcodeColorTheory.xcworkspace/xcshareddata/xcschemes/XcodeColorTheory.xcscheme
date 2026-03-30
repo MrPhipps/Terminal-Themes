@@ -17,7 +17,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA0000000000000000000041"
                BuildableName = "XcodeColorTheory.app"
-               BlueprintName = "XcodeColorTheory"
+               BlueprintName = "XcodeColorTheoryApp"
                ReferencedContainer = "container:XcodeColorTheory.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
