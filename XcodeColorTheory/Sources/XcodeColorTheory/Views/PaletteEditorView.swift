@@ -6,12 +6,10 @@ import SwiftUI
 // Changes are live — the ThemePreviewView updates immediately because
 // it reads from the same @Binding<ColorPalette>.
 //
-// The editor shows:
-//   - The color role name + example token
-//   - A color swatch (showing perceived color on dark background)
-//   - WCAG contrast ratio badge
-//   - Albers vibration / fatigue badges where applicable
-//   - A ColorPicker (SwiftUI native) bound to the OKLCH representation
+// Propagation mode: when isPropagating is true, a Harmony section
+// appears at the top. Changing baseHue or the scheme immediately calls
+// env.propagate(), re-deriving all syntax colors from the Albers generator
+// while preserving the background. Individual color overrides still work.
 
 public struct PaletteEditorView: View {
     @Binding public var palette: ColorPalette
@@ -24,7 +22,29 @@ public struct PaletteEditorView: View {
     private var background: OKLCHColor { palette[.background] }
 
     public var body: some View {
+        @Bindable var env = env
         List {
+            if env.isPropagating {
+                Section("Harmony") {
+                    Picker("Scheme", selection: $env.editingScheme) {
+                        ForEach(HarmonyScheme.allCases, id: \.self) { scheme in
+                            Text(scheme.displayName).tag(scheme)
+                        }
+                    }
+                    HStack {
+                        Text("Base hue")
+                        Slider(value: $env.editingBaseHue, in: 0...360)
+                            .onChange(of: env.editingBaseHue) { env.propagate() }
+                        Text("\(Int(env.editingBaseHue))°")
+                            .monospacedDigit()
+                            .frame(width: 40, alignment: .trailing)
+                    }
+                    Button("Propagate Now") { env.propagate() }
+                        .font(.subheadline)
+                }
+                .onChange(of: env.editingScheme) { env.propagate() }
+            }
+
             Section("Canvas") {
                 ForEach([PaletteRole.background, .selection, .insertionPoint], id: \.self) { role in
                     ColorRoleRow(role: role, palette: $palette)
@@ -67,6 +87,20 @@ public struct PaletteEditorView: View {
                     Task { await env.saveCustomPalette(palette) }
                 }
                 .disabled(ColorPalette.builtIn.contains(where: { $0.name == palette.name }))
+            }
+            ToolbarItem(placement: .secondaryAction) {
+                Button {
+                    if env.isPropagating {
+                        env.isPropagating = false
+                    } else {
+                        env.beginPropagation()
+                    }
+                } label: {
+                    Label(
+                        env.isPropagating ? "Stop Propagating" : "Propagate Harmony",
+                        systemImage: env.isPropagating ? "waveform.slash" : "waveform"
+                    )
+                }
             }
         }
     }
