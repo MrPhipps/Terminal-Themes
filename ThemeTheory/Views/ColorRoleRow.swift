@@ -287,10 +287,10 @@ struct OKLCHSliderRow: View {
 
 enum AlbersAnalysis {
     static func contrastRatio(foreground: RGBColor, background: RGBColor) -> Double {
-        XcodeColorTheory.contrastRatio(foreground: foreground, background: background)
+        ThemeTheory.contrastRatio(foreground: foreground, background: background)
     }
     static func contrastRating(ratio: Double) -> ContrastRating {
-        XcodeColorTheory.contrastRating(ratio: ratio)
+        ThemeTheory.contrastRating(ratio: ratio)
     }
 }
 
