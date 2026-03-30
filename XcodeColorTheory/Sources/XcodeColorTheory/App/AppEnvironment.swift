@@ -132,10 +132,10 @@ public final class AppEnvironment {
     // MARK: - Export
 
     #if os(macOS)
-    public func exportToXcodeThemes(font: ThemeFont = .default) async {
+    public func exportToXcodeThemes(fontHierarchy: FontHierarchy = .default) async {
         exportState = .exporting
         do {
-            let url: URL = try await exporter.exportToXcodeThemes(palette: selectedPalette, font: font)
+            let url: URL = try await exporter.exportToXcodeThemes(palette: selectedPalette, fontHierarchy: fontHierarchy)
             exportState = .success(url)
         } catch {
             exportState = .failure(error.localizedDescription)
@@ -143,17 +143,17 @@ public final class AppEnvironment {
     }
     #endif
 
-    public func exportToDownloads(font: ThemeFont = .default) async {
+    public func exportToDownloads(fontHierarchy: FontHierarchy = .default) async {
         exportState = .exporting
         do {
-            let url: URL = try await exporter.exportToDownloads(palette: selectedPalette, font: font)
+            let url: URL = try await exporter.exportToDownloads(palette: selectedPalette, fontHierarchy: fontHierarchy)
             exportState = .success(url)
         } catch {
             exportState = .failure(error.localizedDescription)
         }
     }
 
-    public func xmlString(font: ThemeFont = .default) -> String {
-        return themeXMLString(for: selectedPalette, font: font)
+    public func xmlString(fontHierarchy: FontHierarchy = .default) -> String {
+        return themeXMLString(for: selectedPalette, fontHierarchy: fontHierarchy)
     }
 }

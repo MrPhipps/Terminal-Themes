@@ -18,16 +18,13 @@ struct ExportView: View {
     @Environment(AppEnvironment.self) private var env
     @Environment(\.dismiss) private var dismiss
 
-    @State private var selectedFont: ThemeFont = ThemeFont.default
+    // Font selection uses a preset label as the Picker tag to avoid needing FontHierarchy: Hashable
+    @State private var selectedPresetLabel: String = FontHierarchy.allPresets[0].label
     @State private var showCopiedFeedback: Bool = false
 
-    private let availableFonts: [(String, ThemeFont)] = [
-        ("JetBrains Mono", .default),
-        ("Fira Code", .firaCode),
-        ("Cascadia Code", .cascadiaCode),
-        ("IBM Plex Mono", .ibmPlexMono),
-        ("Victor Mono", .victorMono),
-    ]
+    private var selectedHierarchy: FontHierarchy {
+        FontHierarchy.allPresets.first(where: { $0.label == selectedPresetLabel })?.hierarchy ?? .default
+    }
 
     var body: some View {
         NavigationStack {
@@ -38,9 +35,17 @@ struct ExportView: View {
                 }
 
                 Section("Font") {
-                    Picker("Editor Font", selection: $selectedFont) {
-                        ForEach(availableFonts, id: \.0) { label, font in
-                            Text(label).tag(font)
+                    Picker("Preset", selection: $selectedPresetLabel) {
+                        ForEach(FontHierarchy.allPresets, id: \.label) { label, _ in
+                            Text(label).tag(label)
+                        }
+                    }
+
+                    ForEach(FontCategory.allCases, id: \.self) { category in
+                        LabeledContent(category.displayName) {
+                            Text(selectedHierarchy[category].familyName)
+                                .font(.system(size: 11, design: .monospaced))
+                                .foregroundStyle(.secondary)
                         }
                     }
                 }
@@ -49,7 +54,7 @@ struct ExportView: View {
                     #if os(macOS)
                     Button {
                         Task {
-                            await env.exportToXcodeThemes(font: selectedFont)
+                            await env.exportToXcodeThemes(fontHierarchy: selectedHierarchy)
                             if env.exportState.errorMessage == nil { dismiss() }
                         }
                     } label: {
@@ -63,7 +68,7 @@ struct ExportView: View {
 
                     Button {
                         Task {
-                            await env.exportToDownloads(font: selectedFont)
+                            await env.exportToDownloads(fontHierarchy: selectedHierarchy)
                             if env.exportState.errorMessage == nil { dismiss() }
                         }
                     } label: {
@@ -76,7 +81,7 @@ struct ExportView: View {
 
                     Button {
                         Task {
-                            let xml: String = env.xmlString(font: selectedFont)
+                            let xml: String = env.xmlString(fontHierarchy: selectedHierarchy)
                             #if canImport(AppKit)
                             NSPasteboard.general.clearContents()
                             NSPasteboard.general.setString(xml, forType: .string)
@@ -142,12 +147,5 @@ struct ExportView: View {
         #if os(macOS)
         .frame(minWidth: 420, minHeight: 400)
         #endif
-    }
-}
-
-extension ThemeFont: Hashable {
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(familyName)
-        hasher.combine(size)
     }
 }
