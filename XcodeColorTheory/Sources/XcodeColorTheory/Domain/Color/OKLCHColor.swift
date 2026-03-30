@@ -18,7 +18,11 @@ public struct OKLCHColor: Sendable, Equatable, Hashable {
     public init(lightness: Double, chroma: Double, hue: Double, alpha: Double = 1.0) {
         self.lightness = lightness.clamped(to: 0...1)
         self.chroma = chroma.clamped(to: 0...0.4)
-        self.hue = hue.truncatingRemainder(dividingBy: 360)
+        var wrappedHue = hue.truncatingRemainder(dividingBy: 360)
+        if wrappedHue < 0 {
+            wrappedHue += 360
+        }
+        self.hue = wrappedHue
         self.alpha = alpha.clamped(to: 0...1)
     }
 
