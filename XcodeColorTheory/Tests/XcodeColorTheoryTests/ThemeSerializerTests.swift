@@ -89,7 +89,7 @@ struct ThemeSerializerTests {
 
     @Test("Custom font appears in serialized output")
     func customFontInOutput() {
-        let theme = xcodeTheme(from: .albersMidnight, font: .sfMono)
+        let theme = xcodeTheme(from: .albersMidnight, fontHierarchy: .flat(.sfMono))
         let xml = serialize(theme)
         #expect(xml.contains("SFMono-Regular"))
     }
