@@ -74,7 +74,7 @@ public func vibrationRisk(colorA: OKLCHColor, colorB: OKLCHColor) -> Double {
 
 public enum VibrationLevel: String, Sendable {
     case safe        // < 0.3
-    case moderate    // 0.3–0.6
+    case moderate    // 0.3–<0.7
     case high        // ≥ 0.7 — avoid as direct syntax neighbors
 }
 
