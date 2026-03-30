@@ -37,8 +37,8 @@ public func serialize(_ theme: XcodeColorTheme) -> String {
 
     // Source editor
     lines += plistEntry("DVTSourceTextBackground", value: theme.background.xcThemeString)
-    lines += plistEntry("DVTSourceTextBlockDimStrength", value: "0.3")
-    lines += plistEntry("DVTSourceTextBlockDimStrengthEmptyFile", value: "0.15")
+    lines += plistReal("DVTSourceTextBlockDimStrength", value: 0.3)
+    lines += plistReal("DVTSourceTextBlockDimStrengthEmptyFile", value: 0.15)
     lines += plistEntry("DVTSourceTextInsertionPointColor", value: theme.insertionPointColor.xcThemeString)
     lines += plistEntry("DVTSourceTextInvisiblesColor", value:
         RGBColor(
@@ -99,6 +99,12 @@ private func plistFooter() -> [String] {
 /// Values that come from user input (palette name) must be XML-escaped before passing here.
 private func plistEntry(_ key: String, value: String) -> [String] {
     return ["    <key>\(key)</key>", "    <string>\(value)</string>"]
+}
+
+/// Emits a key/real pair for numeric plist values (e.g. dim-strength floats).
+/// Using <string> for numeric keys causes Xcode to ignore them.
+private func plistReal(_ key: String, value: Double) -> [String] {
+    return ["    <key>\(key)</key>", "    <real>\(value)</real>"]
 }
 
 /// Escapes the five standard XML entities so user-provided strings
