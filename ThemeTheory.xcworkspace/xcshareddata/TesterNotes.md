@@ -1,4 +1,4 @@
-# XcodeColorTheory — QA / UAT Tester Notes
+# Theme Theory — QA / UAT Tester Notes
 
 ## Environment
 
@@ -9,9 +9,9 @@
 | Xcode | 26.4 |
 | Swift | 6.0 |
 
-Open `XcodeColorTheory.xcworkspace`. Select scheme **XcodeColorTheory**.
+Open `ThemeTheory.xcworkspace`. Select scheme **ThemeTheory**.
 
-- **macOS native**: destination **My Mac** (runs the `XcodeColorTheory macOS` target)
+- **macOS native**: destination **My Mac**
 - **iOS**: any iOS 17+ simulator or a connected device
 
 ---
@@ -120,13 +120,13 @@ Open `ColorExplorer.playground` in the workspace navigator. Run the playground
   values are converted on the way in via `rgbToOKLCH`.
 - iOS **Save to Downloads** writes to the app's sandboxed container, not the
   system Downloads folder; the file is accessible via Files app → On My iPhone →
-  XcodeColorTheory.
+  Theme Theory.
 
 ---
 
 ## Regression Checklist (before every merge to `main`)
 
-- [ ] `swift test` passes in `XcodeColorTheory/` (package domain tests)
+- [ ] `swift test` passes in `XcodeColorTheory/` (SPM package domain tests; directory name unchanged on disk)
 - [ ] ⌘U passes on **My Mac** destination (57 tests)
 - [ ] ⌘U passes on **iPhone simulator** destination (57 tests)
 - [ ] No new warnings in the Issue navigator on either target
