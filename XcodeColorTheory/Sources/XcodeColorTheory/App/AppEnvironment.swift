@@ -56,6 +56,37 @@ public final class AppEnvironment {
     public var exportState: ExportState = ExportState.idle
     public var loadState: LoadState = LoadState.notLoaded
 
+    // MARK: - Harmony propagation editing state
+    //
+    // When isPropagating is true the editor shows a hue slider + scheme picker.
+    // Changing either value calls propagate(), which re-derives all non-background
+    // colors via the Albers harmony generator and writes them into selectedPalette.
+    // Individual color overrides made after propagation persist until the next
+    // propagate() call — the user is always in control.
+
+    public var isPropagating: Bool = false
+    public var editingBaseHue: Double = 240.0
+    public var editingScheme: HarmonyScheme = .albersFavorite
+
+    /// Re-derives all syntax colors from the current baseHue + scheme + background
+    /// and merges them into selectedPalette. Background and selection are preserved.
+    public func propagate() {
+        let hues = accentHues(base: editingBaseHue, scheme: editingScheme)
+        let generated = assignHuesToRoles(hues: hues, background: selectedPalette[.background])
+        var updatedColors = selectedPalette.colors
+        for (role, color) in generated {
+            updatedColors[role] = color
+        }
+        selectedPalette = ColorPalette(name: selectedPalette.name, colors: updatedColors)
+    }
+
+    /// Enters propagation mode, seeding editingBaseHue from the palette's current keyword hue.
+    public func beginPropagation() {
+        editingBaseHue = selectedPalette[.keyword].hue
+        isPropagating = true
+        propagate()
+    }
+
     // MARK: - Computed selection (live lookup into palettes — never stale)
 
     /// The currently selected palette. Setting this updates the stored name.
