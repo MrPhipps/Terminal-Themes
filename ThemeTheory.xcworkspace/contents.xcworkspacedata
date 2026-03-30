@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:XcodeColorTheory.xcodeproj">
+      location = "group:ThemeTheory.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:XcodeColorTheory/Playgrounds/ColorExplorer.playground">

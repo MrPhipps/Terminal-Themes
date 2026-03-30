@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AA0000000000000000000041"
-               BuildableName = "XcodeColorTheory.app"
-               BlueprintName = "XcodeColorTheoryApp"
-               ReferencedContainer = "container:XcodeColorTheory.xcodeproj">
+               BuildableName = "Theme Theory.app"
+               BlueprintName = "ThemeTheoryApp"
+               ReferencedContainer = "container:ThemeTheory.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,10 +33,10 @@
       <CodeCoverageTargets>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "XcodeColorTheory"
-            BuildableName = "XcodeColorTheory"
-            BlueprintName = "XcodeColorTheory"
-            ReferencedContainer = "container:XcodeColorTheory.xcodeproj">
+            BlueprintIdentifier = "ThemeTheory"
+            BuildableName = "ThemeTheory"
+            BlueprintName = "ThemeTheory"
+            ReferencedContainer = "container:ThemeTheory.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -48,13 +48,13 @@
                BlueprintIdentifier = "XcodeColorTheoryTests"
                BuildableName = "XcodeColorTheoryTests"
                BlueprintName = "XcodeColorTheoryTests"
-               ReferencedContainer = "container:XcodeColorTheory.xcodeproj">
+               ReferencedContainer = "container:ThemeTheory.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <TestPlans>
          <TestPlanReference
-            reference = "container:XcodeColorTheory.xcworkspace/xcshareddata/XcodeColorTheory.xctestplan"
+            reference = "container:ThemeTheory.xcworkspace/xcshareddata/ThemeTheory.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -74,9 +74,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA0000000000000000000041"
-            BuildableName = "XcodeColorTheory.app"
-            BlueprintName = "XcodeColorTheory"
-            ReferencedContainer = "container:XcodeColorTheory.xcodeproj">
+            BuildableName = "Theme Theory.app"
+            BlueprintName = "ThemeTheory"
+            ReferencedContainer = "container:ThemeTheory.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -91,9 +91,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA0000000000000000000041"
-            BuildableName = "XcodeColorTheory.app"
-            BlueprintName = "XcodeColorTheory"
-            ReferencedContainer = "container:XcodeColorTheory.xcodeproj">
+            BuildableName = "Theme Theory.app"
+            BlueprintName = "ThemeTheory"
+            ReferencedContainer = "container:ThemeTheory.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
