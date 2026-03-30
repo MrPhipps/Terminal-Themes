@@ -1,5 +1,5 @@
 import Testing
-@testable import XcodeColorTheory
+@testable import ThemeTheory
 
 // MARK: - Color Conversion Tests
 

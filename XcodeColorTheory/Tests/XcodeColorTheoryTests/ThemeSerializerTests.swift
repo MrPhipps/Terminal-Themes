@@ -1,6 +1,6 @@
 import Testing
 import Foundation
-@testable import XcodeColorTheory
+@testable import ThemeTheory
 
 // MARK: - Theme Serializer Tests
 

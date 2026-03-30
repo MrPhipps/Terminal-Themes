@@ -1,8 +1,8 @@
 import SwiftUI
-import XcodeColorTheory
+import ThemeTheory
 
 @main
-struct XcodeColorTheoryApp: App {
+struct ThemeTheoryApp: App {
     @State private var env = AppEnvironment()
 
     var body: some Scene {

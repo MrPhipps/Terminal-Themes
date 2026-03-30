@@ -2,31 +2,32 @@
 import PackageDescription
 
 let package = Package(
-    name: "XcodeColorTheory",
+    name: "ThemeTheory",
     platforms: [
         .macOS(.v14),
         .iOS(.v17)
     ],
     products: [
         // Library: Domain, Services, Views, AppEnvironment.
-        // Imported by the Xcode project app targets and by the test target.
-        .library(name: "XcodeColorTheory", targets: ["XcodeColorTheory"]),
+        // Imported by the Xcode project app target and by the test target.
+        .library(name: "ThemeTheory", targets: ["ThemeTheory"]),
     ],
     targets: [
         // Core library — all model, service, and view code.
         // No @main; safe to import from tests without @testable.
+        // Source directory kept at Sources/XcodeColorTheory to avoid a mass file move.
         .target(
-            name: "XcodeColorTheory",
+            name: "ThemeTheory",
             path: "Sources/XcodeColorTheory",
             swiftSettings: [
                 .swiftLanguageMode(.v6)
             ]
         ),
-        // Sources/XcodeColorTheoryApp/XcodeColorTheoryApp.swift (@main) is compiled
-        // by the native Xcode project targets in XcodeColorTheory.xcodeproj, not here.
+        // Sources/XcodeColorTheoryApp/ThemeTheoryApp.swift (@main) is compiled
+        // by the native Xcode project target in ThemeTheory.xcodeproj, not here.
         .testTarget(
             name: "XcodeColorTheoryTests",
-            dependencies: ["XcodeColorTheory"],
+            dependencies: ["ThemeTheory"],
             path: "Tests/XcodeColorTheoryTests"
         )
     ]
