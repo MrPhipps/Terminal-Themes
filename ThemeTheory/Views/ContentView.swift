@@ -172,7 +172,11 @@ struct NewPaletteSheet: View {
                         }
                         dismiss()
                     }
-                    .disabled(name.trimmingCharacters(in: .whitespaces).isEmpty)
+                    .disabled({
+                        let trimmed = name.trimmingCharacters(in: .whitespaces)
+                        let nameExists = env.palettes.contains(where: { $0.name == trimmed })
+                        return trimmed.isEmpty || nameExists
+                    }())
                 }
             }
         }
