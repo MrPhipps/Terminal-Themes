@@ -122,7 +122,7 @@ public func perceivedColor(of color: OKLCHColor, on background: OKLCHColor) -> O
 public enum ColorTemperature: String, Sendable {
     case warm    // 0–60°, 300–360°
     case neutral // 60–120°, 240–300°
-    case cool    // 120–240°
+    case cool    // 120–259°
 }
 
 public func colorTemperature(hue: Double) -> ColorTemperature {
