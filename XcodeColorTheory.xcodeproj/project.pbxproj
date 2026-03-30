@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9AD558932F7796C00064F8ED /* XcodeColorTheory iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "XcodeColorTheory iOS.entitlements"; sourceTree = "<group>"; };
 		AA0000000000000000000001 /* XcodeColorTheoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeColorTheoryApp.swift; sourceTree = "<group>"; };
 		AA0000000000000000000002 /* XcodeColorTheory macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XcodeColorTheory macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0000000000000000000003 /* XcodeColorTheory iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XcodeColorTheory iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +43,7 @@
 		AA0000000000000000000021 = {
 			isa = PBXGroup;
 			children = (
+				9AD558932F7796C00064F8ED /* XcodeColorTheory iOS.entitlements */,
 				AA0000000000000000000022 /* XcodeColorTheory/Sources/XcodeColorTheoryApp */,
 				AA0000000000000000000023 /* Products */,
 			);
@@ -189,10 +191,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				AUTOMATION_APPLE_EVENTS = NO;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 6UYG4MNSZV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
@@ -202,7 +205,7 @@
 				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
 				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Save your beautiful themes!";
 				INFOPLIST_KEY_NSHumanReadableDescription = "Xcode Color Theory";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -236,6 +239,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 6UYG4MNSZV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
@@ -245,7 +249,7 @@
 				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
 				ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "";
+				INFOPLIST_KEY_NSDocumentsFolderUsageDescription = "Save your beautiful themes!";
 				INFOPLIST_KEY_NSHumanReadableDescription = "Xcode Color Theory";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -274,8 +278,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "XcodeColorTheory iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6UYG4MNSZV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -289,7 +295,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jamesphipps.theorythemes.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesphipps.theorythemes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -302,8 +308,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "XcodeColorTheory iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6UYG4MNSZV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -317,7 +325,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jamesphipps.theorythemes.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesphipps.theorythemes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
