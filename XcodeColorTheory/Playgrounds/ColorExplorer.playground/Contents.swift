@@ -1,4 +1,4 @@
-import XcodeColorTheory
+import ThemeTheory
 
 // ═══════════════════════════════════════════════════════════════════════════
 // XcodeColorTheory — Public API Explorer
@@ -112,9 +112,9 @@ switch validation {
 case .valid:
     print("Palette is valid")
 case .warnings(let warnings, _):
-    print("Warnings: \(warnings.map(\.description))")
+    print("Warnings: \(warnings.map { String(describing: $0) })")
 case .errors(let errors):
-    print("Errors: \(errors.map(\.description))")
+    print("Errors: \(errors.map { String(describing: $0) })")
 }
 
 // MARK: - 6. HarmonyGenerator ─────────────────────────────────────────────
@@ -123,7 +123,7 @@ case .errors(let errors):
 
 let schemes = HarmonyScheme.allCases
 print("\nAll harmony schemes:")
-schemes.forEach { print("  \($0.rawValue) — \($0.displayName)") }
+schemes.forEach { print("  \($0.displayName)") }
 
 // Generate accent hues for a warm amber base
 let hues = accentHues(base: 55, scheme: .albersFavorite)
@@ -137,12 +137,12 @@ print("Assigned keyword hue: \(Int(assignments[.keyword]?.hue ?? 0))°")
 //
 // Pure functions — no I/O. Convert palette → Xcode theme XML.
 
-// All five ThemeFonts
-print("\nAvailable fonts:")
-ThemeFont.allLigatureFonts.forEach { print("  \($0.xcThemeString)") }
+// All font hierarchy presets
+print("\nAvailable font hierarchy presets:")
+FontHierarchy.allPresets.forEach { print("  \($0.label)") }
 
 // xcodeTheme: palette → XcodeColorTheme (intermediate struct)
-let theme = xcodeTheme(from: midnight, font: .default)
+let theme = xcodeTheme(from: midnight)
 print("Theme name: \(theme.name)")
 print("Syntax color count: \(theme.syntaxColors.count)")
 
@@ -152,7 +152,7 @@ print("\nFirst 200 chars of .xccolortheme XML:")
 print(xml.prefix(200))
 
 // Convenience: palette → XML in one step
-let directXML = themeXMLString(for: ochre, font: .firaCode)
+let directXML = themeXMLString(for: ochre, fontHierarchy: .flat(.firaCode))
 print("\nOchre/FiraCode XML length: \(directXML.count) chars")
 
 // MARK: - 8. SyntaxRole ───────────────────────────────────────────────────
