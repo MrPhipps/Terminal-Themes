@@ -56,7 +56,7 @@ public enum PaletteValidation: Sendable {
 
 /// Adjacent role pairs that Xcode renders next to each other on the same line
 /// (e.g. `func myFunction(` has keyword + whitespace + functionIdentifier + …).
-let adjacentRolePairs: [(PaletteRole, PaletteRole)] = [
+public let adjacentRolePairs: [(PaletteRole, PaletteRole)] = [
     (.keyword, .functionIdentifier),
     (.keyword, .typeIdentifier),
     (.typeIdentifier, .plainText),
