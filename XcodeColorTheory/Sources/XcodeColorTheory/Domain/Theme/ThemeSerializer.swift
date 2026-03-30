@@ -22,13 +22,14 @@ public func serialize(_ theme: XcodeColorTheme) -> String {
     lines += ["<dict>"]
 
     let plainString: String = theme.syntaxColors[.plain]?.xcThemeString ?? ""
-    let fontString: String = theme.font.xcThemeString
+    // Console uses the identifier category font (the default "code" voice)
+    let consoleFontString: String = theme.fontHierarchy[.identifier].xcThemeString
 
     // Console debugger colors (match plain text for consistency)
     lines += plistEntry("DVTConsoleDebuggerInputTextColor", value: plainString)
-    lines += plistEntry("DVTConsoleDebuggerInputTextFont", value: fontString)
+    lines += plistEntry("DVTConsoleDebuggerInputTextFont", value: consoleFontString)
     lines += plistEntry("DVTConsoleDebuggerOutputTextColor", value: plainString)
-    lines += plistEntry("DVTConsoleDebuggerOutputTextFont", value: fontString)
+    lines += plistEntry("DVTConsoleDebuggerOutputTextFont", value: consoleFontString)
     lines += plistEntry("DVTConsoleExecutionOutputTextColor", value: plainString)
     lines += plistEntry("DVTConsoleTextBackgroundColor", value: theme.background.xcThemeString)
     lines += plistEntry("DVTConsoleTextInsertionPointColor", value: theme.insertionPointColor.xcThemeString)
@@ -59,9 +60,10 @@ public func serialize(_ theme: XcodeColorTheme) -> String {
     }
     lines += ["    </dict>"]
 
-    // Syntax fonts dict
+    // Syntax fonts dict — per-role, dispatched through FontCategory
     lines += ["    <key>DVTSourceTextSyntaxFonts</key>", "    <dict>"]
     for role in SyntaxRole.allCases {
+        let fontString = theme.fontHierarchy[role.fontCategory].xcThemeString
         lines += [
             "        <key>\(role.rawValue)</key>",
             "        <string>\(fontString)</string>"
@@ -113,6 +115,6 @@ func xmlEscaped(_ string: String) -> String {
 
 /// Convenience wrapper: converts a ColorPalette directly to `.xccolortheme` XML.
 /// Pure function — no actor required.
-public func themeXMLString(for palette: ColorPalette, font: ThemeFont = .default) -> String {
-    return serialize(xcodeTheme(from: palette, font: font))
+public func themeXMLString(for palette: ColorPalette, fontHierarchy: FontHierarchy = .default) -> String {
+    return serialize(xcodeTheme(from: palette, fontHierarchy: fontHierarchy))
 }

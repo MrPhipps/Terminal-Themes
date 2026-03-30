@@ -40,6 +40,18 @@ public enum SyntaxRole: String, CaseIterable, Sendable {
     case otherName              = "xcode.syntax.other.name"
     case otherOperator          = "xcode.syntax.other.operator"
 
+    /// Font category for this syntax role, used to select per-category fonts in the theme.
+    public var fontCategory: FontCategory {
+        switch self {
+        case .comment, .commentDoc, .commentDocKeyword:
+            return .comment
+        case .keyword, .attribute, .preprocessor, .otherOperator:
+            return .keyword
+        default:
+            return .identifier
+        }
+    }
+
     /// Maps this Xcode syntax role to the corresponding semantic PaletteRole.
     public var paletteRole: PaletteRole {
         switch self {
