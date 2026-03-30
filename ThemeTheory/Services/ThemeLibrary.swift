@@ -1,3 +1,4 @@
+import ThemeTheory
 import Foundation
 
 // MARK: - ThemeLibrary (actor — imperative shell)

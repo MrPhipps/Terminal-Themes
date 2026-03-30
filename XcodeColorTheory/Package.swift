@@ -13,18 +13,17 @@ let package = Package(
         .library(name: "ThemeTheory", targets: ["ThemeTheory"]),
     ],
     targets: [
-        // Core library — all model, service, and view code.
+        // Core domain library — pure model and color science.
         // No @main; safe to import from tests without @testable.
-        // Source directory kept at Sources/XcodeColorTheory to avoid a mass file move.
         .target(
             name: "ThemeTheory",
-            path: "Sources/XcodeColorTheory",
+            path: "Domain",
             swiftSettings: [
                 .swiftLanguageMode(.v6)
             ]
         ),
-        // ThemeTheory/ThemeTheoryApp.swift (@main) lives outside the SPM package and is
-        // compiled by the native Xcode project target in ThemeTheory.xcodeproj, not here.
+        // App layer (ThemeTheory/App|Services|Views + ThemeTheoryApp.swift) lives outside
+        // the SPM package and is compiled by the native Xcode target, not here.
         .testTarget(
             name: "XcodeColorTheoryTests",
             dependencies: ["ThemeTheory"],

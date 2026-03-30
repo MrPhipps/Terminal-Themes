@@ -9,12 +9,30 @@
 /* Begin PBXBuildFile section */
 		AA0000000000000000000011 /* ThemeTheoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* ThemeTheoryApp.swift */; };
 		AA0000000000000000000013 /* ThemeTheory in Frameworks */ = {isa = PBXBuildFile; productRef = AA0000000000000000000051 /* ThemeTheory */; };
+		AA000000000000000000011A /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000101 /* AppEnvironment.swift */; };
+		AA000000000000000000011B /* ThemeExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000102 /* ThemeExporter.swift */; };
+		AA000000000000000000011C /* ThemeLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000103 /* ThemeLibrary.swift */; };
+		AA000000000000000000011D /* AlbersAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000104 /* AlbersAnalysisView.swift */; };
+		AA000000000000000000011E /* ColorRoleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000105 /* ColorRoleRow.swift */; };
+		AA000000000000000000011F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000106 /* ContentView.swift */; };
+		AA0000000000000000000120 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000107 /* ExportView.swift */; };
+		AA0000000000000000000121 /* PaletteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000108 /* PaletteEditorView.swift */; };
+		AA0000000000000000000122 /* ThemePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000109 /* ThemePreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9AD558932F7796C00064F8ED /* ThemeTheory iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ThemeTheory iOS.entitlements"; sourceTree = "<group>"; };
 		AA0000000000000000000001 /* ThemeTheoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTheoryApp.swift; sourceTree = "<group>"; };
 		AA0000000000000000000002 /* Theme Theory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Theme Theory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000101 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		AA0000000000000000000102 /* ThemeExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExporter.swift; sourceTree = "<group>"; };
+		AA0000000000000000000103 /* ThemeLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeLibrary.swift; sourceTree = "<group>"; };
+		AA0000000000000000000104 /* AlbersAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbersAnalysisView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000105 /* ColorRoleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRoleRow.swift; sourceTree = "<group>"; };
+		AA0000000000000000000106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000107 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000108 /* PaletteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteEditorView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000109 /* ThemePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000001 /* ThemeTheoryApp.swift */,
+				AA0000000000000000000131 /* App */,
+				AA0000000000000000000132 /* Services */,
+				AA0000000000000000000133 /* Views */,
 			);
 			path = ThemeTheory;
 			sourceTree = "<group>";
@@ -52,6 +73,36 @@
 				AA0000000000000000000002 /* Theme Theory.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000131 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000101 /* AppEnvironment.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000132 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000102 /* ThemeExporter.swift */,
+				AA0000000000000000000103 /* ThemeLibrary.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000133 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000104 /* AlbersAnalysisView.swift */,
+				AA0000000000000000000105 /* ColorRoleRow.swift */,
+				AA0000000000000000000106 /* ContentView.swift */,
+				AA0000000000000000000107 /* ExportView.swift */,
+				AA0000000000000000000108 /* PaletteEditorView.swift */,
+				AA0000000000000000000109 /* ThemePreviewView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +180,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA0000000000000000000011 /* ThemeTheoryApp.swift in Sources */,
+				AA000000000000000000011A /* AppEnvironment.swift in Sources */,
+				AA000000000000000000011B /* ThemeExporter.swift in Sources */,
+				AA000000000000000000011C /* ThemeLibrary.swift in Sources */,
+				AA000000000000000000011D /* AlbersAnalysisView.swift in Sources */,
+				AA000000000000000000011E /* ColorRoleRow.swift in Sources */,
+				AA000000000000000000011F /* ContentView.swift in Sources */,
+				AA0000000000000000000120 /* ExportView.swift in Sources */,
+				AA0000000000000000000121 /* PaletteEditorView.swift in Sources */,
+				AA0000000000000000000122 /* ThemePreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
