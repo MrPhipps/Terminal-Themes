@@ -33,17 +33,17 @@
 			isa = PBXGroup;
 			children = (
 				9AD558932F7796C00064F8ED /* ThemeTheory iOS.entitlements */,
-				AA0000000000000000000022 /* XcodeColorTheory/Sources/XcodeColorTheoryApp */,
+				AA0000000000000000000022 /* ThemeTheory */,
 				AA0000000000000000000023 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AA0000000000000000000022 /* XcodeColorTheory/Sources/XcodeColorTheoryApp */ = {
+		AA0000000000000000000022 /* ThemeTheory */ = {
 			isa = PBXGroup;
 			children = (
 				AA0000000000000000000001 /* ThemeTheoryApp.swift */,
 			);
-			path = XcodeColorTheory/Sources/XcodeColorTheoryApp;
+			path = ThemeTheory;
 			sourceTree = "<group>";
 		};
 		AA0000000000000000000023 /* Products */ = {

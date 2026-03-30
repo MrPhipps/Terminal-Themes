@@ -23,8 +23,8 @@ let package = Package(
                 .swiftLanguageMode(.v6)
             ]
         ),
-        // Sources/XcodeColorTheoryApp/ThemeTheoryApp.swift (@main) is compiled
-        // by the native Xcode project target in ThemeTheory.xcodeproj, not here.
+        // ThemeTheory/ThemeTheoryApp.swift (@main) lives outside the SPM package and is
+        // compiled by the native Xcode project target in ThemeTheory.xcodeproj, not here.
         .testTarget(
             name: "XcodeColorTheoryTests",
             dependencies: ["ThemeTheory"],
