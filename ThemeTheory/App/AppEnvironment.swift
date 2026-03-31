@@ -79,6 +79,10 @@ public final class AppEnvironment {
         let generated = assignHuesToRoles(hues: hues, background: selectedPalette[.background])
         var updatedColors = selectedPalette.colors
         for (role, color) in generated {
+            // Preserve existing background and selection colors as documented.
+            if role == .background || role == .selection {
+                continue
+            }
             updatedColors[role] = color
         }
         selectedPalette = ColorPalette(name: selectedPalette.name, colors: updatedColors)
