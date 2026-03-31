@@ -16,16 +16,17 @@ import AppKit
 // Expanding the row reveals OKLCH sliders (L / C / H) that manipulate
 // the perceptual color model directly — no sRGB round-trip, no gamut loss.
 
+
 struct ColorRoleRow: View {
     let role: PaletteRole
     @Binding var palette: ColorPalette
     @State private var isExpanded: Bool = false
 
     private var color: OKLCHColor { palette[role] }
-    private var rgbColor: RGBColor { oklchToRGB(color) }
+	private var rgbColor:RGBColor { oklchToRGB(color) }
     private var swiftUIColor: Color { rgbColor.swiftUIColor }
     private var background: OKLCHColor { palette[.background] }
-    private var bgRGB: RGBColor { oklchToRGB(background) }
+	private var bgRGB:RGBColor { oklchToRGB(background) }
 
     private var contrastRatio: Double {
         guard !role.isBackground else { return 1 }

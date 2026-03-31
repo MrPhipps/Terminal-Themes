@@ -4,6 +4,9 @@ import Foundation
 import SwiftUI
 #endif
 
+
+public typealias RGBColor = ThemeTheory.RGBColor
+
 // MARK: - ExportState
 //
 // Algebraic type representing the lifecycle of a theme export operation.

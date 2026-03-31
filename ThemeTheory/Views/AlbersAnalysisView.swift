@@ -12,8 +12,8 @@ import SwiftUI
 struct AlbersAnalysisView: View {
     let palette: ColorPalette
 
-    private var validation: PaletteValidation { validate(palette: palette) }
-    private var bg: RGBColor { oklchToRGB(palette[.background]) }
+		private var validation: PaletteValidation { validate(palette: palette) }
+		private var bg: RGBColor { ThemeTheory.oklchToRGB(palette[.background]) }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {

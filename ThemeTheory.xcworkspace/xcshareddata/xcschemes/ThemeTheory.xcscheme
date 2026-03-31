@@ -4,8 +4,7 @@
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES"
-      runPostActionsOnFailure = "NO">
+      buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -39,6 +38,12 @@
             ReferencedContainer = "container:ThemeTheory.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:ThemeTheory.xcworkspace/xcshareddata/ThemeTheory.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -52,12 +57,6 @@
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <TestPlans>
-         <TestPlanReference
-            reference = "container:ThemeTheory.xcworkspace/xcshareddata/ThemeTheory.xctestplan"
-            default = "YES">
-         </TestPlanReference>
-      </TestPlans>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -75,7 +74,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA0000000000000000000041"
             BuildableName = "Theme Theory.app"
-            BlueprintName = "ThemeTheory"
+            BlueprintName = "ThemeTheoryApp"
             ReferencedContainer = "container:ThemeTheory.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -92,7 +91,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AA0000000000000000000041"
             BuildableName = "Theme Theory.app"
-            BlueprintName = "ThemeTheory"
+            BlueprintName = "ThemeTheoryApp"
             ReferencedContainer = "container:ThemeTheory.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
