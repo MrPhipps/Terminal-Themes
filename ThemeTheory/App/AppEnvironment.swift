@@ -83,6 +83,10 @@ public final class AppEnvironment {
             if role == .background || role == .selection {
                 continue
             }
+            // Preserve existing background and selection colors as documented.
+            if role == .background || role == .selection {
+                continue
+            }
             updatedColors[role] = color
         }
         selectedPalette = ColorPalette(name: selectedPalette.name, colors: updatedColors)
