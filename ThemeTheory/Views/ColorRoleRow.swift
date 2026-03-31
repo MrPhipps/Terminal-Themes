@@ -23,10 +23,10 @@ struct ColorRoleRow: View {
     @State private var isExpanded: Bool = false
 
     private var color: OKLCHColor { palette[role] }
-	private var rgbColor:RGBColor { oklchToRGB(color) }
+    private var rgbColor: RGBColor { oklchToRGB(color) }
     private var swiftUIColor: Color { rgbColor.swiftUIColor }
     private var background: OKLCHColor { palette[.background] }
-	private var bgRGB:RGBColor { oklchToRGB(background) }
+    private var bgRGB: RGBColor { oklchToRGB(background) }
 
     private var contrastRatio: Double {
         guard !role.isBackground else { return 1 }
