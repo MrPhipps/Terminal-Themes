@@ -133,35 +133,9 @@ struct AlbersAnalysisView: View {
                 .foregroundStyle(.secondary)
 
             VStack(spacing: 2) {
-                ForEach(adjacentRolePairs.indices, id: \.self) { i in
-                    let (a, b) = adjacentRolePairs[i]
-                    let risk = vibrationRisk(colorA: palette[a], colorB: palette[b])
-                    let level = vibrationLevel(risk: risk)
-
-                    HStack {
-                        // Two mini swatches side by side (simulating adjacency)
-                        HStack(spacing: 1) {
-                            RoundedRectangle(cornerRadius: 2)
-                                .fill(oklchToRGB(palette[a]).swiftUIColor)
-                                .frame(width: 10, height: 12)
-                            RoundedRectangle(cornerRadius: 2)
-                                .fill(oklchToRGB(palette[b]).swiftUIColor)
-                                .frame(width: 10, height: 12)
-                        }
-
-                        Text("\(a.displayName) + \(b.displayName)")
-                            .font(.system(size: 11))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-
-                        Text(level.rawValue.capitalized)
-                            .font(.system(size: 10, weight: .medium))
-                            .padding(.horizontal, 6)
-                            .padding(.vertical, 2)
-                            .background(levelColor(level).opacity(0.2))
-                            .foregroundStyle(levelColor(level))
-                            .clipShape(Capsule())
-                    }
-                }
+                Text("Vibration analysis is not available in this configuration.")
+                    .font(.system(size: 11))
+                    .foregroundStyle(.secondary)
             }
         }
     }
