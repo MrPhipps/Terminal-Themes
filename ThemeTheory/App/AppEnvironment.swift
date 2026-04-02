@@ -133,18 +133,24 @@ public final class AppEnvironment {
     // MARK: - Load
 
     public func loadLibrary() async {
+        let (newPalettes, newLoadState): ([ColorPalette], LoadState) = await resolveLibrary()
+        palettes = newPalettes
+        loadState = newLoadState
+    }
+
+    /// Pure computation: resolves which palettes and load state to use.
+    /// Touches no `self` properties — all mutation is done by the caller.
+    private func resolveLibrary() async -> ([ColorPalette], LoadState) {
         do {
             try await library.load()
-            palettes = await library.allPalettes()
-            loadState = .loaded
+            let loaded: [ColorPalette] = await library.allPalettes()
+            return (loaded, .loaded)
         } catch CocoaError.fileNoSuchFile, CocoaError.fileReadNoSuchFile {
             // First launch — no saved palettes yet.
-            palettes = ColorPalette.builtIn
-            loadState = .loaded
+            return (ColorPalette.builtIn, .loaded)
         } catch {
             // Genuine failure (corrupted JSON, permissions, etc.) — surface it.
-            loadState = .failed("Could not load saved palettes: \(error.localizedDescription)")
-            palettes = ColorPalette.builtIn
+            return (ColorPalette.builtIn, .failed("Could not load saved palettes: \(error.localizedDescription)"))
         }
     }
 
