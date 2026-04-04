@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9AC450DE2F7B434D00D26926 /* ThemeTheory in Frameworks */ = {isa = PBXBuildFile; productRef = 9AC450DD2F7B434D00D26926 /* ThemeTheory */; };
+		AA0000000000000000000011 /* ThemeTheoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000001 /* ThemeTheoryApp.swift */; };
+		AA000000000000000000011A /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000101 /* AppEnvironment.swift */; };
+		AA000000000000000000011B /* ThemeExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000102 /* ThemeExporter.swift */; };
+		AA000000000000000000011C /* ThemeLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000103 /* ThemeLibrary.swift */; };
+		AA000000000000000000011D /* AlbersAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000104 /* AlbersAnalysisView.swift */; };
+		AA000000000000000000011E /* ColorRoleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000105 /* ColorRoleRow.swift */; };
+		AA000000000000000000011F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000106 /* ContentView.swift */; };
+		AA0000000000000000000120 /* ExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000107 /* ExportView.swift */; };
+		AA0000000000000000000121 /* PaletteEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000108 /* PaletteEditorView.swift */; };
+		AA0000000000000000000122 /* ThemePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000109 /* ThemePreviewView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9AD558932F7796C00064F8ED /* ThemeTheory iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ThemeTheory iOS.entitlements"; sourceTree = "<group>"; };
+		AA0000000000000000000001 /* ThemeTheoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTheoryApp.swift; sourceTree = "<group>"; };
+		AA0000000000000000000002 /* Theme Theory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Theme Theory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000101 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		AA0000000000000000000102 /* ThemeExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeExporter.swift; sourceTree = "<group>"; };
+		AA0000000000000000000103 /* ThemeLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeLibrary.swift; sourceTree = "<group>"; };
+		AA0000000000000000000104 /* AlbersAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbersAnalysisView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000105 /* ColorRoleRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRoleRow.swift; sourceTree = "<group>"; };
+		AA0000000000000000000106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000107 /* ExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000108 /* PaletteEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteEditorView.swift; sourceTree = "<group>"; };
+		AA0000000000000000000109 /* ThemePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePreviewView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA0000000000000000000032 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC450DE2F7B434D00D26926 /* ThemeTheory in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA0000000000000000000021 = {
+			isa = PBXGroup;
+			children = (
+				9AD558932F7796C00064F8ED /* ThemeTheory iOS.entitlements */,
+				AA0000000000000000000022 /* ThemeTheory */,
+				AA0000000000000000000023 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000022 /* ThemeTheory */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000001 /* ThemeTheoryApp.swift */,
+				AA0000000000000000000131 /* App */,
+				AA0000000000000000000132 /* Services */,
+				AA0000000000000000000133 /* Views */,
+			);
+			path = ThemeTheory;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000023 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000002 /* Theme Theory.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000131 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000101 /* AppEnvironment.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000132 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000102 /* ThemeExporter.swift */,
+				AA0000000000000000000103 /* ThemeLibrary.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000133 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AA0000000000000000000104 /* AlbersAnalysisView.swift */,
+				AA0000000000000000000105 /* ColorRoleRow.swift */,
+				AA0000000000000000000106 /* ContentView.swift */,
+				AA0000000000000000000107 /* ExportView.swift */,
+				AA0000000000000000000108 /* PaletteEditorView.swift */,
+				AA0000000000000000000109 /* ThemePreviewView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA0000000000000000000041 /* ThemeTheoryApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0000000000000000000071 /* Build configuration list for PBXNativeTarget "ThemeTheoryApp" */;
+			buildPhases = (
+				AA0000000000000000000031 /* Sources */,
+				AA0000000000000000000032 /* Frameworks */,
+				AA0000000000000000000033 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThemeTheoryApp;
+			packageProductDependencies = (
+				9AC450DD2F7B434D00D26926 /* ThemeTheory */,
+			);
+			productName = ThemeTheoryApp;
+			productReference = AA0000000000000000000002 /* Theme Theory.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA0000000000000000000081 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2640;
+				TargetAttributes = {
+					AA0000000000000000000041 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = AA0000000000000000000073 /* Build configuration list for PBXProject "ThemeTheory" */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA0000000000000000000021;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9AC450DC2F7B434D00D26926 /* XCLocalSwiftPackageReference "XcodeColorTheory" */,
+			);
+			productRefGroup = AA0000000000000000000023 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA0000000000000000000041 /* ThemeTheoryApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA0000000000000000000033 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA0000000000000000000031 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0000000000000000000011 /* ThemeTheoryApp.swift in Sources */,
+				AA000000000000000000011A /* AppEnvironment.swift in Sources */,
+				AA000000000000000000011B /* ThemeExporter.swift in Sources */,
+				AA000000000000000000011C /* ThemeLibrary.swift in Sources */,
+				AA000000000000000000011D /* AlbersAnalysisView.swift in Sources */,
+				AA000000000000000000011E /* ColorRoleRow.swift in Sources */,
+				AA000000000000000000011F /* ContentView.swift in Sources */,
+				AA0000000000000000000120 /* ExportView.swift in Sources */,
+				AA0000000000000000000121 /* PaletteEditorView.swift in Sources */,
+				AA0000000000000000000122 /* ThemePreviewView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AA0000000000000000000061 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"AUTOMATION_APPLE_EVENTS[sdk=macosx*]" = NO;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "ThemeTheory iOS.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 6UYG4MNSZV;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				ENABLE_PREVIEWS = YES;
+				"ENABLE_RESOURCE_ACCESS_AUDIO_INPUT[sdk=macosx*]" = NO;
+				"ENABLE_RESOURCE_ACCESS_CALENDARS[sdk=macosx*]" = NO;
+				"ENABLE_RESOURCE_ACCESS_CAMERA[sdk=macosx*]" = NO;
+				"ENABLE_RESOURCE_ACCESS_CONTACTS[sdk=macosx*]" = NO;
+				"ENABLE_RESOURCE_ACCESS_LOCATION[sdk=macosx*]" = NO;
+				"ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY[sdk=macosx*]" = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_NSDocumentsFolderUsageDescription[sdk=macosx*]" = "Save your beautiful themes!";
+				"INFOPLIST_KEY_NSHumanReadableDescription[sdk=macosx*]" = "Theme Theory";
+				"INFOPLIST_KEY_NSPrincipalClass[sdk=macosx*]" = NSApplication;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad[sdk=iphoneos*]" = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone[sdk=iphoneos*]" = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesphipps.theorythemes;
+				PRODUCT_NAME = "Theme Theory";
+				"RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES[sdk=macosx*]" = NO;
+				"RUNTIME_EXCEPTION_ALLOW_JIT[sdk=macosx*]" = NO;
+				"RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY[sdk=macosx*]" = NO;
+				"RUNTIME_EXCEPTION_DEBUGGING_TOOL[sdk=macosx*]" = NO;
+				"RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION[sdk=macosx*]" = NO;
+				"RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION[sdk=macosx*]" = NO;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				"TARGETED_DEVICE_FAMILY[sdk=iphoneos*]" = "1,2";
+			};
+			name = Debug;
+		};
+		AA0000000000000000000062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"AUTOMATION_APPLE_EVENTS[sdk=macosx*]" = NO;
+				"CODE_SIGN_ENTITLEMENTS[sdk=iphoneos*]" = "ThemeTheory iOS.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 6UYG4MNSZV;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
+				ENABLE_PREVIEWS = YES;
+				"ENABLE_RESOURCE_ACCESS_AUDIO_INPUT[sdk=macosx*]" = NO;
+				"ENABLE_RESOURCE_ACCESS_CALENDARS[sdk=macosx*]" = NO;
+				"ENABLE_RESOURCE_ACCESS_CAMERA[sdk=macosx*]" = NO;
+				"ENABLE_RESOURCE_ACCESS_CONTACTS[sdk=macosx*]" = NO;
+				"ENABLE_RESOURCE_ACCESS_LOCATION[sdk=macosx*]" = NO;
+				"ENABLE_RESOURCE_ACCESS_PHOTO_LIBRARY[sdk=macosx*]" = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_NSDocumentsFolderUsageDescription[sdk=macosx*]" = "Save your beautiful themes!";
+				"INFOPLIST_KEY_NSHumanReadableDescription[sdk=macosx*]" = "Theme Theory";
+				"INFOPLIST_KEY_NSPrincipalClass[sdk=macosx*]" = NSApplication;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad[sdk=iphoneos*]" = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				"INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone[sdk=iphoneos*]" = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamesphipps.theorythemes;
+				PRODUCT_NAME = "Theme Theory";
+				"RUNTIME_EXCEPTION_ALLOW_DYLD_ENVIRONMENT_VARIABLES[sdk=macosx*]" = NO;
+				"RUNTIME_EXCEPTION_ALLOW_JIT[sdk=macosx*]" = NO;
+				"RUNTIME_EXCEPTION_ALLOW_UNSIGNED_EXECUTABLE_MEMORY[sdk=macosx*]" = NO;
+				"RUNTIME_EXCEPTION_DEBUGGING_TOOL[sdk=macosx*]" = NO;
+				"RUNTIME_EXCEPTION_DISABLE_EXECUTABLE_PAGE_PROTECTION[sdk=macosx*]" = NO;
+				"RUNTIME_EXCEPTION_DISABLE_LIBRARY_VALIDATION[sdk=macosx*]" = NO;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				"TARGETED_DEVICE_FAMILY[sdk=iphoneos*]" = "1,2";
+			};
+			name = Release;
+		};
+		AA0000000000000000000065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 6UYG4MNSZV;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA0000000000000000000066 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 6UYG4MNSZV;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA0000000000000000000071 /* Build configuration list for PBXNativeTarget "ThemeTheoryApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000061 /* Debug */,
+				AA0000000000000000000062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0000000000000000000073 /* Build configuration list for PBXProject "ThemeTheory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000065 /* Debug */,
+				AA0000000000000000000066 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		9AC450DC2F7B434D00D26926 /* XCLocalSwiftPackageReference "XcodeColorTheory" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = XcodeColorTheory;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9AC450DD2F7B434D00D26926 /* ThemeTheory */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ThemeTheory;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AA0000000000000000000081 /* Project object */;
+}
