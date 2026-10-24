@@ -84,6 +84,7 @@ Each colour role row now has an expand/collapse chevron.
 - [ ] Dragging any slider updates the swatch, the preview, and the contrast badge in real time.
 - [ ] Collapsing the row hides the sliders; the colour change is retained.
 - [ ] Adjusting H to a negative offset (via hue rotation) wraps correctly into 0–360° — no black or invalid swatch. *(hue normalisation fix)*
+- [ ] On the **Selection** role (has opacity), dragging L / C / H keeps the current opacity. *(alpha preservation fix)*
 - [ ] Works on both macOS and iOS.
 
 ### 5. Harmony Propagation Mode *(new)*
@@ -164,6 +165,31 @@ Open `ColorExplorer.playground` in the workspace navigator. Run the playground
   - XML output begins with `<?xml version="1.0"`
   - Font hierarchy presets list is non-empty
 
+### 12. OKLCH System Color Picker *(new, macOS only)*
+
+**DEV setup:** select the **OKLCHColorPicker** scheme → My Mac → ⌘B, then
+copy `OKLCH.colorPicker` from the build products folder to `~/Library/ColorPickers/`
+(see `OKLCHColorPicker/README.md`). Quit and relaunch the host app after every install.
+
+- [ ] Open TextEdit → Format → Font → Show Colors (⇧⌘C). An **OKLCH** tab appears in the
+  panel toolbar alongside Wheel / Sliders / Palettes; its tooltip reads "OKLCH".
+- [ ] Selecting the tab shows a swatch, an `oklch(L% C H)` readout, a `#RRGGBB` readout,
+  and the L / C / H sliders.
+- [ ] Dragging a slider changes the selected text colour in TextEdit live.
+- [ ] Switch to the **Sliders → RGB** tab: values match the hex readout.
+  Change RGB there, switch back to OKLCH: the sliders reflect the new colour.
+- [ ] Drag C to 0 (grey), then back up: H stays where it was and does not jump.
+- [ ] While dragging C to the top of its range at a saturated hue, the sliders
+  do not jitter (gamut clamping must not echo back into the sliders).
+- [ ] Set the panel's opacity slider to ~50 %, then drag L: opacity stays at ~50 %.
+- [ ] Readout text is selectable and copyable.
+- [ ] In **Theme Theory**, click a role's colour well: the same OKLCH tab is available,
+  and choosing a colour updates the role.
+- [ ] Quit TextEdit, reopen the colour panel: the panel reopens on the OKLCH tab if it
+  was last used.
+- [ ] Remove the bundle from `~/Library/ColorPickers/`, relaunch: the tab is gone and the
+  panel has no errors.
+
 ---
 
 ## Known Limitations
@@ -173,6 +199,9 @@ Open `ColorExplorer.playground` in the workspace navigator. Run the playground
   values are converted on the way in via `rgbToOKLCH`.
 - iOS **Save to Downloads** writes to the app's sandboxed container, not the
   system Downloads folder; accessible via Files app → On My iPhone → Theme Theory.
+- The OKLCH colour picker tab only appears in apps that allow third-party plug-ins.
+  Apps with hardened runtime + library validation (unless signed by the same team)
+  skip it silently.
 - OKLCH slider chroma range is clamped to 0–0.37; colours near the sRGB gamut
   edge at saturated hues may clip slightly on export.
 
@@ -189,4 +218,5 @@ Open `ColorExplorer.playground` in the workspace navigator. Run the playground
 - [ ] At least one export path verified manually on macOS; confirm `<real>` plist values
 - [ ] OKLCH sliders verified on at least one role, both platforms
 - [ ] Harmony propagation verified: base hue change re-derives palette
+- [ ] OKLCHColorPicker scheme builds; picker tab verified in TextEdit (§12)
 - [ ] TesterNotes.md updated if any scenario changed
